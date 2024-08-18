@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/colorDarkYellow">
+        <shape>
+            <corners android:topLeftRadius="0dp"
+                android:bottomLeftRadius="0dp"
+                android:topRightRadius="0dp"
+                android:bottomRightRadius="0dp"/>
+
+            <solid android:color="@color/new_five_selection"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:topLeftRadius="0dp"
+                android:bottomLeftRadius="0dp"
+                android:topRightRadius="0dp"
+                android:bottomRightRadius="0dp"/>
+
+            <solid android:color="@color/new_five_color"/>
+            <stroke android:width="0.1dp" android:color="@color/gray_dark" />
+        </shape>
+    </item>
+</selector>

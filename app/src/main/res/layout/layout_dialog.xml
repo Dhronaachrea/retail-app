@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="140dp"
+    android:layout_height="80dp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/bet_amount_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="$100"
+        android:textColor="@color/new_five_selection"
+        android:background="@drawable/buy_rectangle_color"/>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvPack"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:background="@drawable/button_rounded_grey"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="7dp"
+    android:textSize="12sp"
+    android:gravity="center" />
+    <!--android:background="@drawable/button_rounded_grey"-->

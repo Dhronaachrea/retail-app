@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context="com.skilrock.retailapp.virtual_sports.ui.VirtualSportsActivity">
+
+    <include
+        android:id="@+id/some_id_if_needed"
+        layout="@layout/layout_app_bar_draw_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:background="#000000"/>
+
+</LinearLayout>

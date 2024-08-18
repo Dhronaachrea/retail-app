@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="30dp"
+    android:paddingLeft="30dp"
+    android:background="@drawable/rounded_corners"
+    android:gravity="center"
+    android:layout_margin="30dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:contentDescription="@string/image" />
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/colorDarkGrey"
+        android:layout_marginBottom="30dp"/>
+    <TextView
+        android:id="@+id/tvSoftMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorDarkGrey"
+        android:layout_marginBottom="18dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="12sp"
+            android:background="@drawable/button_rounded_border_bg"
+            android:text="@string/cancel"
+            android:textColor="@color/colorAppOrange"
+            android:layout_marginEnd="10dp" />
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textSize="12sp"
+            android:background="@drawable/button_rounded_bg"
+            android:text="@string/ok"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</LinearLayout>

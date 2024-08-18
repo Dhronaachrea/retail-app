@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@android:color/transparent">
+            <RelativeLayout
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/round_background">
+
+                <TextView
+                    android:id="@+id/draw_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/seguisb"
+                    android:text="17NOV" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/draw_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_60sdp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="4sp"
+                android:textColor="#d30e24"
+                android:textSize="@dimen/_15sdp"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:text="Euro Pool" />
+            <TextView
+                android:id="@+id/draw_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_15sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:textStyle="normal"
+                android:layout_marginLeft="@dimen/_180sdp"
+                android:textColor="#012161"
+                android:layout_centerVertical="true"
+                android:lineSpacingExtra="4sp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_alignParentRight="true"
+                android:gravity="end"
+                android:text="$150000"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_6sdp"
+                android:layout_below="@+id/draw_price"
+                android:layout_marginLeft="@dimen/_200sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:textStyle="normal"
+                android:textColor="#707070"
+
+                android:layout_centerVertical="true"
+                android:lineSpacingExtra="2sp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_alignParentRight="true"
+                android:gravity="end"
+                android:text="@string/pool_size"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

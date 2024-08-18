@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    android:layout_marginStart="1dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginEnd="10dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.skilrock.retailapp.utils.CircularTextView
+        android:id="@+id/ball1text"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dg_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/some_id_if_needed"
+        layout="@layout/layout_app_bar_draw_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:overScrollMode="always"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:scrollbars="vertical"
+        android:visibility="visible" />
+</LinearLayout>

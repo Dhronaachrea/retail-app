@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    android:background="@drawable/rounded_corners"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/image" />
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"
+        android:text="@string/success"
+        android:textAllCaps="true"
+        android:textColor="@color/colorGreen"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/llTransactionNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    tools:ignore="SmallSp"
+                    android:text="@string/trans_num_colon"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvTransNumber"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTransactionDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/trans_date_colon"
+                    tools:ignore="SmallSp"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvTransDate"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTicketNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/ticket_number_colon"
+                    tools:ignore="SmallSp"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvTicketNumber"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llWinningAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/winning_amt_colon"
+                    tools:ignore="SmallSp"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvWinningAmount"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCommission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/commission_amount"
+                    tools:ignore="SmallSp"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvCommission"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTdsAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/tds_amt_colon"
+                    android:textColor="@color/colorLightGrey"
+                    tools:ignore="SmallSp"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvTdsAmount"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llNetWinningAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/net_winning_amt"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="11sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:id="@+id/tvNetWinningAmount"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvBalanceNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textColor="@color/colorLightGrey"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                android:text="@string/note_balance_not_update_due_to_some_technical_issue_please_refresh_your_balance_after_some_time"
+                tools:ignore="SmallSp"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- <Button
+           android:id="@+id/button"
+           android:layout_width="match_parent"
+           android:layout_height="40dp"
+           android:layout_marginLeft="30dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginRight="30dp"
+           android:layout_marginBottom="10dp"
+           android:background="@drawable/button_rounded_bg"
+           android:text="@string/ok"
+           android:textColor="@color/colorWhite"
+           android:textSize="16sp" />-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:background="@drawable/button_rounded_bg"
+            android:text="@string/ok"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:background="@drawable/round_button_white"
+            android:text="@string/cancel"
+            android:textColor="#d30e24"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/some_id_if_needed"
+        layout="@layout/layout_app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp"
+                app:errorTextAppearance="@style/edit_text_error_hint"
+                app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:textSize="16sp"
+                    android:textColor="#666666"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/mobile_number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvRegistered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#e96262"
+                android:textSize="11sp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="7dp"
+                android:visibility="gone"
+                android:text="@string/this_number_is_already_registered"
+                tools:ignore="SmallSp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp"
+                app:errorTextAppearance="@style/edit_text_error_hint"
+                app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="textCapWords"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:textSize="16sp"
+                    android:textColor="#666666"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/first_name" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:errorTextAppearance="@style/edit_text_error_hint"
+                app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="textCapWords"
+                    android:singleLine="true"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:textSize="16sp"
+                    android:textColor="#666666"
+                    android:maxLength="50"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/last_name" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:errorTextAppearance="@style/edit_text_error_hint"
+                app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:textSize="16sp"
+                    android:textColor="#666666"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:hint="@string/deposit_amount" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginTop="10dp"
+                app:errorTextAppearance="@style/edit_text_error_hint"
+                app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="textCapWords"
+                    android:textSize="16sp"
+                    android:textColor="#666666"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:hint="@string/address" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:textSize="11sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:text="@string/a_verification_code_will_be_sent_to_above_provided_mobile_number"
+        android:textColor="@color/colorLightGrey"
+        tools:ignore="SmallSp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="16sp"
+        android:background="@drawable/button_rounded_bg"
+        android:text="@string/verify"
+        android:textColor="@color/colorWhite" />
+
+</LinearLayout>

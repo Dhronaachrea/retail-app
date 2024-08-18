@@ -1,0 +1,81 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:textColorHint">@color/colorLightGrey</item>
+        <item name="android:spinnerDropDownItemStyle">@style/mySpinnerItemStyle</item>
+    </style>
+
+    <style name="AppThemeNoActionBar" parent="Theme.Design.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textColorHint">@color/colorLightGrey</item>
+        <item name="android:spinnerDropDownItemStyle">@style/mySpinnerItemStyle</item>
+    </style>
+
+    <style name="edit_text_normal_hint">
+        <item name="android:textColor">@color/colorLightGrey</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="edit_text_error_hint">
+        <item name="android:textColor">@color/colorAppOrange</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/colorDarkGrey</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorAppOrange</item>
+        <item name="colorPrimaryDark">@color/colorAppOrange</item>
+        <item name="colorAccent">@color/colorAppOrange</item>
+        <item name="android:headerBackground">@color/colorAppOrange</item>
+    </style>
+
+
+    <style name="AppTheme.Dialog" parent="Base.Theme.AppCompat.Light.Dialog">
+        <!-- removing the dialog's action bar -->
+        <item name="windowActionBar">false</item>
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+        <item name="android:timePickerStyle">@style/MyTimePickerStyle</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:background">#33000000</item> <!-- Or any transparency or color you need -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse" >
+
+        <item name="android:textSize">@dimen/_6sdp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="DialogAnimationZoom">
+        <item name="android:windowEnterAnimation">@anim/zoom_in</item>
+        <item name="android:windowExitAnimation">@anim/zoom_out</item>
+    </style>
+
+    <style name="DialogSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+</resources>

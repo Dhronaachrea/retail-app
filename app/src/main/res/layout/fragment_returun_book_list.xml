@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/some_id_if_needed"
+        layout="@layout/layout_app_bar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGameList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp" />
+
+    <!--<Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textSize="16sp"
+        android:background="@drawable/button_rounded_bg"
+        android:text="@string/confirm"
+        android:textColor="@color/colorWhite" />-->
+
+</LinearLayout>

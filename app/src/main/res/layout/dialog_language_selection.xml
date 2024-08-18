@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/rounded_corners"
+    android:gravity="center"
+    android:layout_margin="30dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvBookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorDarkGrey"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:text="@string/choose_language"/>
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorDarkGrey" />
+
+    <TextView
+        android:id="@+id/tvFrench"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:tag="fr"
+        android:textColor="@color/colorLightGrey_2"
+        android:text="@string/french"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="1dp"
+        android:background="@color/colorLightestGrey00"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:id="@+id/tvEnglish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:tag="en"
+        android:textColor="@color/colorLightGrey_2"
+        android:text="@string/english"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="1dp"
+        android:background="@color/colorLightestGrey00"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <TextView
+        android:id="@+id/tvArabic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:tag="ar"
+        android:textColor="@color/colorLightGrey_2"
+        android:text="@string/arabic"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_rounded_bg"
+        android:padding="10dp"
+        android:text="@string/select"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+</LinearLayout>

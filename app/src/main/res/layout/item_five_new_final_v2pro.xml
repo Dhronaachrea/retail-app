@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:paddingLeft="10dp"
+    android:paddingTop="15dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:id="@+id/vs_games"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="3.2"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/txt_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center_vertical"
+                android:text="African League\nMadagascar"
+                android:textColor="@color/new_game"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/circle_yellow"
+                android:gravity="center"
+                android:text="@string/vs"
+                android:textColor="@android:color/white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle_yellow"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/vs"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_8sdp" />
+            <TextView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/circle_yellow"
+                android:gravity="center"
+                android:text="@string/vs"
+                android:textColor="@android:color/white"
+              />
+            <TextView
+                android:id="@+id/txt_away"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center_vertical|left"
+                android:text="African League\nMadagascar"
+                android:textColor="@color/new_game"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/selected_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center_horizontal|right"
+            android:maxLines="1"
+            android:text="h,h+,d,a,a+"
+            android:textAllCaps="true"
+            android:textColor="@color/new_game"
+            android:textSize="@dimen/_12sdp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/numbers"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/round_corner_blue"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_8sdp" />
+
+        <TextView
+            android:id="@+id/txt_venue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="African League, Madagascar"
+            android:textColor="@color/event_color"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

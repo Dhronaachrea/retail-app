@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="4dp"
+    app:cardPreventCornerOverlap="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClickBack"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_drawer"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/image"
+                android:onClick="onClickBack"
+                android:padding="5dp"
+                android:src="@drawable/arrow_left" />
+
+            <ImageView
+                android:id="@+id/ivGameIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="3dp"
+                android:contentDescription="@string/image"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:maxWidth="220dp"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="2"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorDarkYellow"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <!--android:onClick="onClickHome"-->
+        <LinearLayout
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:id="@+id/sbs_reprint"
+            android:onClick="onClickSbsMenuReprint"
+            android:background="@drawable/button_rounded_bg_blue_sbs"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/sbs_menu_reprint"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="14dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_refresh_24"
+                android:contentDescription="@string/image" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:id="@+id/sbs_menu"
+            android:onClick="onClickSbsMenu"
+            android:background="@drawable/button_rounded_bg_blue_sbs"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/sbs_menu_img"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="@string/image" />
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:id="@+id/win_txt"
+                android:gravity="center"
+                android:visibility="visible"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="3dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="end"
+                android:onClick="callBalanceApi"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvBal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

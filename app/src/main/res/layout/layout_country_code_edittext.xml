@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/til_mobile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_solid_grey"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvCountryCode"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/border_rounded_left"
+        android:drawablePadding="10dp"
+        android:drawableEnd="@drawable/icon_black_down_arror"
+        android:textColor="@color/colorDarkGrey"/>
+
+    <LinearLayout
+        android:id="@+id/llMobile"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/border_rounded_right"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="@string/mobile_number"
+            android:inputType="number"
+            android:maxLength="15"
+            android:minEms="8"
+            android:maxLines="1"
+            android:digits="@string/number_only_digits"
+            android:textColor="#666666"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:singleLine="true"
+            tools:ignore="Autofill" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="@dimen/_2sdp"
+    android:layout_height="@dimen/_52sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp"
+        android:elevation="@dimen/_12sdp"
+        android:background="@drawable/bg_purchase_main_number_sle">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/numbers"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_1sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_corner_blue_right_bottom"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_5sdp" />
+
+            <LinearLayout
+                android:id="@+id/vs_games"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkboxes"
+                    android:layout_marginLeft="@dimen/_11sdp"
+                    android:layout_marginTop="@dimen/_2sdp">
+
+                    <TextView
+                        android:id="@+id/txt_venue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/txt_time"
+                        android:fontFamily="@font/roboto_regular"
+                        android:singleLine="false"
+                        android:maxLines="2"
+                        android:maxLength="32"
+                        android:text="African League, Madagascar"
+                        android:textColor="@color/event_color"
+                        android:textSize="@dimen/_6sdp" />
+
+                    <TextView
+                        android:id="@+id/txt_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:layout_marginBottom="3dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="14:34"
+                        android:textColor="@color/event_color"
+                        android:textSize="@dimen/_6sdp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/checkboxes"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_19sdp"
+                android:layout_below="@+id/vs_games"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:gravity="center">
+
+                <com.skilrock.retailapp.sle_game_portrait.DynamicTextCheckBox
+                    android:id="@+id/cb_home_extra"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_9sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rb_right_round_new_land"
+                    android:button="@drawable/rb_left_round_new_land"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="@string/home_ui"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_12sdp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff" />
+
+                <com.skilrock.retailapp.sle_game_portrait.DynamicTextCheckBox
+                    android:id="@+id/cb_home"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_9sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rb_right_round_new_land"
+                    android:button="@drawable/rb_normal_new_land"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="@string/home_ui"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_12sdp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff" />
+
+                <com.skilrock.retailapp.sle_game_portrait.DynamicTextCheckBox
+                    android:id="@+id/cb_draw"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_9sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rb_right_round_new_land"
+                    android:button="@drawable/rb_normal_new_land"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="@string/draw_ui"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_12sdp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff" />
+
+                <com.skilrock.retailapp.sle_game_portrait.DynamicTextCheckBox
+                    android:id="@+id/cb_away"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_9sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rb_right_round_new_land"
+                    android:button="@drawable/rb_normal_new_land"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="@string/away_ui"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_12sdp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff" />
+
+                <com.skilrock.retailapp.sle_game_portrait.DynamicTextCheckBox
+                    android:id="@+id/cb_away_extra"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_9sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rb_right_round_new_land"
+                    android:button="@drawable/rb_right_round_new_land"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="@string/away_ui"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/item_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkboxes"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txt_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="African League\nMadagascar"
+                    android:textColor="@color/new_game"
+                    android:textSize="@dimen/_6sdp" />
+
+                <TextView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height=".2dp"
+                    android:background="@drawable/circle_yellow"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="@string/vs"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_5sdp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle_yellow"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="@string/vs"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_5sdp" />
+
+                <TextView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height=".2dp"
+                    android:background="@drawable/circle_yellow"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="@string/vs"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_5sdp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/txt_away"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical|right"
+                    android:maxLines="1"
+                    android:text="African League\nMadagascar"
+                    android:textColor="@color/new_game"
+                    android:textSize="@dimen/_6sdp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email_id">Email-id</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="address_details">Address Details</string>
+
+    <string name="home_plus_ui">H+</string>
+    <string name="away_plus_ui">A+</string>
+    <string name="away_ui">A</string>
+    <string name="home_ui">H</string>
+    <string name="draw_ui">D</string>
+
+    <string name="home_plus">H+</string>
+    <string name="away_plus">A+</string>
+    <string name="away">A</string>
+    <string name="home">H</string>
+    <string name="draw">D</string>
+    <string name="vs">VS</string>
+</resources>

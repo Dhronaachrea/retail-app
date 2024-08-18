@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/some_id_if_needed"
+        layout="@layout/layout_app_bar_transparent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_ola"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_gravity="center"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0px"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            card_view:cardElevation="10dp"
+            card_view:cardMaxElevation="10dp"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardPreventCornerOverlap="false"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="40dp"
+                android:paddingBottom="35dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/ola"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="2dp"
+                    android:background="@color/colorDarkGrey" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvOlaMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+                <!--<FrameLayout
+                    android:id="@+id/frame_deposit"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/button_rounded_bg_white">
+
+                    <Button
+                        android:id="@+id/btn_deposit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawablePadding="10dp"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/icon_wallet_dark"
+                        android:drawableLeft="@drawable/icon_wallet_dark"
+                        android:text="@string/deposit"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textSize="16sp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_registration"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_rounded_bg_white">
+
+                    <Button
+                        android:id="@+id/btn_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawablePadding="10dp"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/icon_wallet_dark"
+                        android:drawableLeft="@drawable/icon_wallet_dark"
+                        android:text="@string/registration"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textSize="16sp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_withdraw"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_rounded_bg_white">
+
+                    <Button
+                        android:id="@+id/btn_withdraw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawablePadding="10dp"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/icon_withdrawal_dark"
+                        android:drawableLeft="@drawable/icon_withdrawal_dark"
+                        android:text="@string/withdrawal"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textSize="16sp" />
+
+                </FrameLayout>-->
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

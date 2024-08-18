@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@color/header_color"
+        android:gravity="center"
+        android:text="@string/payment"
+        android:textAlignment="center"
+        android:textColor="@color/header_text_color"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/headerMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:textSize="@dimen/_12sdp"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/pay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:hint="@string/pay"
+        android:inputType="number"
+        android:textAlignment="viewStart"
+        android:textColor="@color/pay_text"
+        android:textColorHint="@color/pay_text"
+        android:textSize="@dimen/_16sdp" />
+
+    <Button
+        android:id="@+id/make_payment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_margin="@dimen/_30sdp"
+        android:background="@drawable/payment_bt_bg"
+        android:text="@string/proceed"
+        android:textColor="@color/payment_text_color"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp" />
+</LinearLayout>

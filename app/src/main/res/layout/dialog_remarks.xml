@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
+    android:background="@drawable/rounded_corners"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingLeft="30dp"
+    android:layout_gravity="center"
+    android:paddingRight="30dp">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorDarkGrey"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorDarkGrey" />
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorLightGrey"
+        android:textSize="10sp"
+        android:visibility="gone"
+        android:textStyle="italic"
+        tools:ignore="SmallSp" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_gravity="start"
+        android:gravity="start"
+        android:layout_height="match_parent">
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/llOtherContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_remark"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            app:errorTextAppearance="@style/edit_text_error_hint"
+            app:hintTextAppearance="@style/edit_text_normal_hint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/add_remark"
+                android:inputType="text"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                android:maxLines="1"
+                android:maxLength="80"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_rounded_border_bg"
+                android:text="@string/cancel"
+                android:textColor="@color/colorAppOrange"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_rounded_bg"
+                android:text="@string/submit"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

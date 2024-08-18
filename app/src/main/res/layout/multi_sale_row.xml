@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="17sp"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTicketList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:id="@+id/dotLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/dot_line_dark"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>

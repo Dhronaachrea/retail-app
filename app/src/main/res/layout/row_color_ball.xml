@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    android:layout_marginStart="5dp">
+
+    <com.skilrock.retailapp.utils.CircularTextView
+        android:id="@+id/colorBall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/image_tick"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/check_mark"
+        android:tint="@color/colorWhite"
+        android:visibility="gone" />
+
+</RelativeLayout>

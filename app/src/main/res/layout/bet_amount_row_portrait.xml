@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tvBetType"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_gravity="center"
+    android:background="@drawable/rounded_red_outline_low_radius"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:selectableItemBackground"
+    android:gravity="center"
+    android:minWidth="80dp"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
+    android:textColor="#d30e24"
+    android:textSize="10sp"
+    tools:ignore="SmallSp" />

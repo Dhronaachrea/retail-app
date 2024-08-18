@@ -1,0 +1,152 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="#f3f3f3"
+    android:baselineAligned="false"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorLightGrey"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            tools:ignore="SmallSp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        android:layout_weight="1"
+        android:background="@color/colorWhite"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                tools:ignore="NestedWeights" />-->
+
+            <TextView
+                android:id="@+id/tvBillNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:textSize="11sp"
+                android:textStyle="italic"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/tvBillDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:textSize="11sp"
+                android:textStyle="italic"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:text="sdfsdfsdfsdf"
+                android:textColor="#808080"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />-->
+
+            <TextView
+                android:id="@+id/tvDueAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button_settle"
+                android:layout_width="wrap_content"
+                android:maxWidth="80dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_bg_red_padding"
+                android:text="@string/settle_now"
+                android:clickable="true"
+                android:minHeight="20dp"
+                android:focusable="true"
+                android:foreground="?android:selectableItemBackground"
+                android:textAllCaps="false"
+                android:textColor="@color/colorDue"
+                android:textSize="12sp"
+                android:includeFontPadding="false"
+                android:textStyle="italic"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

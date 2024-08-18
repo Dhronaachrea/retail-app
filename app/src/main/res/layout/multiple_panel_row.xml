@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp">
+
+    <LinearLayout
+        android:id="@+id/view_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="1.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/tvPrice"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="start"
+            android:textColor="@color/colorDrawBackground"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main_numbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:overScrollMode="always"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/view_banker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"
+                    android:text="UL - "
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/colorDrawBackground"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_upper_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:overScrollMode="always" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="start"
+                    android:text="LL - "
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/colorDrawBackground"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_lower_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:overScrollMode="always" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_side_bet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/background_grey_border_circular"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/image_side_bet_type"
+                android:layout_width="10dp"
+                android:layout_height="10dp" />
+
+            <com.skilrock.retailapp.utils.CircularTextView
+                android:id="@+id/colorBall"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSideHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="start"
+                android:textAllCaps="true"
+                android:textColor="@color/colorDrawBackground"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_header"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/tvPrice"
+        android:gravity="start|bottom"
+        android:textStyle="bold"
+        android:textColor="@color/colorDrawBackground"
+        android:textSize="11sp"
+        tools:ignore="SmallSp" />
+
+    <ImageView
+        android:id="@+id/image_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_header"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toEndOf="@+id/tvFooter"
+        android:contentDescription="image"
+        android:padding="2dp"
+        android:scaleType="center"
+        android:src="@drawable/trash" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="start"
+        android:text="$0"
+        android:textColor="@color/colorDrawHeaderGreen"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/image_dashed"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/image_delete"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/background_dashed" />
+
+</RelativeLayout>

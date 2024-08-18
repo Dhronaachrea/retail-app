@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="2dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/background_bet_deselected"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/row"
+    android:foreground="?android:selectableItemBackground"
+    android:gravity="center"
+    android:elevation="2dp"
+    android:minWidth="60dp"
+    android:maxWidth="80dp"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="wrap_content"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/increasing"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_pattern_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Increasing"
+        android:textColor="@color/colorBlack"
+        android:textSize="9sp" />
+
+    <TextView
+        android:id="@+id/tv_pattern_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:gravity="center"
+        android:text="2.0"
+        android:visibility="invisible"
+        android:textColor="@color/colorDrawButtonRed"
+        android:textSize="10sp" />
+</LinearLayout>

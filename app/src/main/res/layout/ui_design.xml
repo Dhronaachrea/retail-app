@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/some_id_if_needed"
+        layout="@layout/layout_app_bar_draw_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#012161">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:weightSum="5"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/back_click"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/arrowleft"
+                    android:foregroundGravity="left"></ImageView>
+                <ImageView
+                    android:id="@+id/img_game"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:background="@drawable/soccerthirteen"
+                    android:foregroundGravity="left"></ImageView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="3.2"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="soccer 13"
+                    android:fontFamily="@font/roboto_black"
+                    android:textColor="#ffc400"
+                    android:layout_gravity="center_vertical"
+                    android:foregroundGravity="left"></TextView>
+
+            </LinearLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:foregroundGravity="right"
+                    android:layout_marginRight="30dp"
+                    android:lineSpacingExtra="2.5sp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="Emily"
+                    android:textStyle="normal"
+                    />
+
+                <TextView
+                    android:id="@+id/balance"
+                    android:layout_below="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="25dp"
+                    android:textSize="@dimen/_8sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="normal"
+                    android:textColor="#ffffff"
+                    android:text="$10,50,000"
+                    android:lineSpacingExtra="5.5sp"
+
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>-->
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:background="#123374"-->
+<!--        android:layout_height="55dp">-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="120dp"-->
+<!--            android:orientation="vertical"-->
+<!--            android:background="@drawable/round_background"-->
+<!--            android:layout_marginLeft="14dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_height="38dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="13sp"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:fontFamily="sans-serif-medium"-->
+<!--                android:textStyle="normal"-->
+<!--                android:textColor="#ffffff"-->
+<!--                android:lineSpacingExtra="3sp"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="9sp"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:fontFamily="sans-serif"-->
+<!--                android:textStyle="normal"-->
+<!--                android:textColor="#f3f3f3"-->
+<!--                android:lineSpacingExtra="2sp"-->
+<!--                />-->
+
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="38dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginLeft=".75dp"-->
+<!--            android:background="@drawable/round_background_right">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="15sp"-->
+<!--                android:layout_marginLeft="15dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:fontFamily="sans-serif-medium"-->
+<!--                android:textStyle="normal"-->
+<!--                android:textColor="#ffffff"-->
+<!--                android:lineSpacingExtra="3.5sp"-->
+<!--                />-->
+<!--        </LinearLayout>-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="35dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="sans-serif"-->
+<!--            android:lineSpacingExtra="2sp"-->
+<!--            android:layout_marginTop="1dp"-->
+<!--            android:layout_marginLeft="50dp"-->
+<!--            android:textColor="#d8d8d8"-->
+<!--            android:textSize="9sp"-->
+<!--            android:textStyle="normal" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="20sp"-->
+<!--            android:fontFamily="sans-serif"-->
+<!--            android:layout_marginLeft="2dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:textStyle="normal"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:lineSpacingExtra="4sp"-->
+<!--            />-->
+<!--    </LinearLayout>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:textColor="#606060"
+        android:lineSpacingExtra="3sp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sports_recycle_view">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

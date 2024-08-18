@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/some_id_if_needed"
+        layout="@layout/layout_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutChallanNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        app:errorTextAppearance="@style/edit_text_error_hint"
+        app:hintTextAppearance="@style/edit_text_normal_hint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ticket_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="@string/alpha_numeric_hyphen"
+            android:gravity="start"
+            android:hint="@string/barcode_number"
+            android:inputType="text"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=""
+            android:textAlignment="viewStart" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="400dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_weight="1"
+        android:visibility="visible">
+
+
+        <SurfaceView
+            android:id="@+id/surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button_proceed"
+        android:layout_width="400dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_rounded_bg"
+        android:text="@string/verify"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+</LinearLayout>

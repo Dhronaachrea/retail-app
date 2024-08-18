@@ -1,0 +1,441 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_expand_addressdetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:id="@+id/tv_address_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/address_details"
+                        android:textColor="@color/colorLightGrey_2"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/tv_address_title"
+                        android:background="@color/colorLightGrey" />
+
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/expandableLayout_address_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_address_one"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorTextAppearance="@style/edit_text_error_hint"
+                    app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_address_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/address_one"
+                        android:inputType="text"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_address_two"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_address_one"
+                    android:layout_marginTop="5dp"
+                    app:errorTextAppearance="@style/edit_text_error_hint"
+                    app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_address_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/address_two"
+                        android:inputType="text"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_address_two"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/lt_spinner_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/til_country"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/border"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <Spinner
+                                android:id="@+id/spinnerCountry"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:dropDownVerticalOffset="50dp"
+                                android:prompt="@string/select_country" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="-2dp"
+                            android:background="?android:colorBackground"
+                            android:paddingStart="3dp"
+                            android:paddingEnd="3dp"
+                            android:text="@string/country"
+                            android:textColor="@color/colorLightGrey"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_country"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/lt_spinner_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/til_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/border"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <Spinner
+                                android:id="@+id/spinnerState"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:dropDownVerticalOffset="50dp"
+                                android:prompt="@string/select_state" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="-2dp"
+                            android:background="?android:colorBackground"
+                            android:paddingStart="3dp"
+                            android:paddingEnd="3dp"
+                            android:text="@string/state"
+                            android:textColor="@color/colorLightGrey"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lt_spinner_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/til_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/border"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <Spinner
+                                android:id="@+id/spinnerCity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:dropDownVerticalOffset="50dp"
+                                android:prompt="@string/select_city" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="-2dp"
+                            android:background="?android:colorBackground"
+                            android:paddingStart="3dp"
+                            android:paddingEnd="3dp"
+                            android:text="@string/city"
+                            android:textColor="@color/colorLightGrey"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_zip_code"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/view_state"
+                    android:layout_marginTop="5dp"
+                    app:errorTextAppearance="@style/edit_text_error_hint"
+                    app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_zip_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_state"
+                        android:digits="@string/number_only_digits"
+                        android:hint="@string/zip_code"
+                        android:inputType="phone"
+                        android:maxLength="6"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_expand_userdetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:id="@+id/tv_user_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/user_details"
+                        android:textColor="@color/colorLightGrey_2"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/tv_user_title"
+                        android:background="@color/colorLightGrey" />
+
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/expandableLayout_user_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_first_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorTextAppearance="@style/edit_text_error_hint"
+                    app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="@string/char_only_digits"
+                        android:hint="@string/first_name"
+                        android:inputType="textPersonName"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_middle_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_first_name"
+                    android:layout_marginTop="5dp"
+                    app:errorTextAppearance="@style/edit_text_error_hint"
+                    app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_middle_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="@string/char_only_digits"
+                        android:hint="@string/middle_name"
+                        android:inputType="textPersonName"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_last_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_middle_name"
+                    android:layout_marginTop="5dp"
+                    app:errorTextAppearance="@style/edit_text_error_hint"
+                    app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="@string/char_only_digits"
+                        android:hint="@string/last_name"
+                        android:inputType="textPersonName"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/view_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_last_name"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_user_name"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_toLeftOf="@+id/btn_check_user"
+                        app:errorTextAppearance="@style/edit_text_error_hint"
+                        app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_user_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:digits="@string/char_only_digits"
+                            android:hint="@string/user_name"
+                            android:inputType="textPersonName"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:textColor="#666666"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <Button
+                        android:id="@+id/btn_check_user"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/icon_proceed"
+                        android:elevation="5dp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_valid_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/valid_user_name"
+                    android:drawablePadding="5dp"
+                    android:layout_marginStart="5dp"
+                    android:visibility="gone"
+                    android:drawableEnd="@drawable/icon_check"
+                    android:layout_below="@+id/view_username"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

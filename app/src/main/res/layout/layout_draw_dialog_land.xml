@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="700dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="80dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginEnd="80dp"
+    android:layout_marginBottom="50dp"
+    android:background="@drawable/background_bet_deselected_rounded">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_top_rounded_blue"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/draws"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/image_cancel"
+                android:layout_width="40dp"
+                android:foregroundGravity="center"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:scaleType="center"
+                android:src="@drawable/x_1" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/challan_check_cox_row" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_done"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/button_rounded_bg"
+                android:gravity="center"
+                android:text="@string/ok"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

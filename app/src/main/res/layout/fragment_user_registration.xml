@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/some_id_if_needed"
+        layout="@layout/layout_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/button_proceed"
+        android:layout_below="@+id/some_id_if_needed"
+        android:layout_marginTop="10dp"
+        android:fillViewport="false"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_expand_orgdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackgroundGrey_0"
+                android:padding="6dp"
+                android:clickable="true"
+                android:foreground="?android:selectableItemBackground"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/organisation_details"
+                    android:textColor="@color/colorLightGrey_2"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img_expand_orgdetails"
+                    android:layout_width="20dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/icon_black_down_arror" />
+
+            </RelativeLayout>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout_org_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                app:ael_duration="300"
+                app:ael_expanded="true"
+                android:layout_marginTop="10dp"
+                app:ael_interpolator="linear"
+                android:layout_marginBottom="5dp"
+                app:ael_orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/spinnerContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/til_role"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <Spinner
+                            android:id="@+id/spinnerRole"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:prompt="@string/select_role" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_role"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="-2dp"
+                        android:background="?android:colorBackground"
+                        android:paddingStart="3dp"
+                        android:paddingEnd="3dp"
+                        android:text="@string/role"
+                        android:textColor="@color/colorLightGrey"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_contact_person"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                app:errorTextAppearance="@style/edit_text_error_hint"
+                app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_contact_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/contact_person"
+                    android:inputType="textPersonName"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_expand_contactdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorBackgroundGrey_0"
+                android:padding="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/contact_details"
+                    android:textColor="@color/colorLightGrey_2"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img_expand_contactdetails"
+                    android:layout_width="20dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/icon_black_down_arror" />
+
+            </RelativeLayout>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout_contact_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                app:ael_duration="300"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                app:ael_expanded="false"
+                app:ael_interpolator="linear"
+                app:ael_orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:errorTextAppearance="@style/edit_text_error_hint"
+                    app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <include
+                    android:id="@+id/view_mobile"
+                    layout="@layout/layout_country_code_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/til_email"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/view_mobile"
+                    android:background="@drawable/border_solid_grey"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvCountryCode_alt_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border_rounded_left"
+                        android:drawableEnd="@drawable/icon_black_down_arror"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/til_alt_mobile"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_rounded_right"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_alt_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@null"
+                            android:digits="@string/number_only_digits"
+                            android:hint="@string/alt_mobile_number"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:textColor="#666666"
+                            android:textSize="16sp"
+                            tools:ignore="Autofill" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_expand_addressdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorBackgroundGrey_0"
+                android:padding="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/address_details"
+                    android:textColor="@color/colorLightGrey_2"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img_expand_addressdetails"
+                    android:layout_width="20dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/icon_black_down_arror" />
+            </RelativeLayout>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout_address_details"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:padding="5dp"
+                app:ael_duration="300"
+                app:ael_expanded="false"
+                app:ael_interpolator="linear"
+                app:ael_orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_address_one"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorTextAppearance="@style/edit_text_error_hint"
+                    app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_address_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/address_one"
+                        android:inputType="text"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_address_two"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_address_one"
+                    android:layout_marginTop="5dp"
+                    app:errorTextAppearance="@style/edit_text_error_hint"
+                    app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_address_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/address_two"
+                        android:inputType="text"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_address_two"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/lt_spinner_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/til_country"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/border"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <Spinner
+                                android:id="@+id/spinnerCountry"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:dropDownVerticalOffset="50dp"
+                                android:prompt="@string/select_country" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="-2dp"
+                            android:background="?android:colorBackground"
+                            android:paddingStart="3dp"
+                            android:paddingEnd="3dp"
+                            android:text="@string/country"
+                            android:textColor="@color/colorLightGrey"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_country"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/lt_spinner_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/til_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/border"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <Spinner
+                                android:id="@+id/spinnerState"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:dropDownVerticalOffset="50dp"
+                                android:prompt="@string/select_state" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="-2dp"
+                            android:background="?android:colorBackground"
+                            android:paddingStart="3dp"
+                            android:paddingEnd="3dp"
+                            android:text="@string/state"
+                            android:textColor="@color/colorLightGrey"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/lt_spinner_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/til_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/border"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <Spinner
+                                android:id="@+id/spinnerCity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:dropDownVerticalOffset="50dp"
+                                android:prompt="@string/select_city" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="-2dp"
+                            android:background="?android:colorBackground"
+                            android:paddingStart="3dp"
+                            android:paddingEnd="3dp"
+                            android:text="@string/city"
+                            android:textColor="@color/colorLightGrey"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_zip_code"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/view_state"
+                    android:layout_marginTop="5dp"
+                    app:errorTextAppearance="@style/edit_text_error_hint"
+                    app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_zip_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/zip_code"
+                        android:inputType="phone"
+                        android:maxLength="6"
+                        android:digits="@string/number_only_digits"
+                        android:maxLines="1"
+                        android:layout_below="@+id/view_state"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_expand_userdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackgroundGrey_0"
+                android:padding="6dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/user_details"
+                    android:textColor="@color/colorLightGrey_2"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img_expand_userdetails"
+                    android:layout_width="20dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/icon_black_down_arror" />
+
+            </RelativeLayout>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout_user_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                app:ael_duration="300"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                app:ael_expanded="false"
+                app:ael_interpolator="linear"
+                app:ael_orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_first_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:errorTextAppearance="@style/edit_text_error_hint"
+                    app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/first_name"
+                        android:inputType="textPersonName"
+                        android:maxLength="15"
+                        android:digits="@string/char_only_digits"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_middle_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_first_name"
+                    android:layout_marginTop="5dp"
+                    app:errorTextAppearance="@style/edit_text_error_hint"
+                    app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_middle_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/middle_name"
+                        android:inputType="textPersonName"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:digits="@string/char_only_digits"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_last_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_middle_name"
+                    android:layout_marginTop="5dp"
+                    app:errorTextAppearance="@style/edit_text_error_hint"
+                    app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/last_name"
+                        android:inputType="textPersonName"
+                        android:maxLength="15"
+                        android:digits="@string/char_only_digits"
+                        android:maxLines="1"
+                        android:textColor="#666666"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/view_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_last_name"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_user_name"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_toLeftOf="@+id/btn_check_user"
+                        app:errorTextAppearance="@style/edit_text_error_hint"
+                        app:hintTextAppearance="@style/edit_text_normal_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_user_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:hint="@string/user_name"
+                            android:inputType="textPersonName"
+                            android:maxLength="20"
+                            android:digits="@string/char_only_digits"
+                            android:maxLines="1"
+                            android:textColor="#666666"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btn_check_user"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/icon_refresh"
+                        android:elevation="5dp" />
+                </RelativeLayout>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button_proceed"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_rounded_bg"
+        android:text="@string/proceed"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dg_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/some_id_if_needed"
+        layout="@layout/layout_app_bar_draw_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutTicketNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        app:errorTextAppearance="@style/edit_text_error_hint"
+        app:hintTextAppearance="@style/edit_text_normal_hint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ticket_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:gravity="start"
+            android:hint="@string/ticket_number"
+            android:inputType="number"
+            android:maxLength="18"
+            android:maxLines="1"
+            android:text=""
+            android:textAlignment="viewStart" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/ticket_number"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/ed_first_no"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/epl_bg_edit"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="5"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/ed_second_no"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/epl_bg_edit_dull"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="5"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/ed_third_no"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/epl_bg_edit_dull"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="5"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/ed_fourth_no"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@drawable/epl_bg_edit_dull"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_weight="1"
+
+        android:visibility="visible">
+
+        <com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/scanner_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:autoFocusButtonColor="@color/colorAppOrange"
+            app:autoFocusButtonVisible="false"
+            app:flashButtonColor="@color/colorAppOrange"
+            app:flashButtonVisible="true"
+            app:frameAspectRatioHeight="1"
+            app:frameAspectRatioWidth="1"
+            app:frameColor="@color/colorAccent"
+            app:frameCornersRadius="0dp"
+            app:frameCornersSize="50dp"
+            app:frameSize="0.75"
+            app:frameThickness="2dp"
+            app:maskColor="#77000000" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button_proceed"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_rounded_bg"
+        android:text="@string/verify"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+</LinearLayout>

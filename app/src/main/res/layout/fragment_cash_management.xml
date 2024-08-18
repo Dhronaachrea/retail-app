@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/some_id_if_needed"
+        layout="@layout/layout_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlSelectUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/llSelectUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:padding="5dp">
+
+            <Spinner
+                android:id="@+id/spinnerSelectUser"
+                android:layout_width="match_parent"
+                android:textAlignment="viewStart"
+                android:gravity="start"
+                android:layout_height="wrap_content"
+                android:dropDownVerticalOffset="50dp"
+                android:prompt="@string/select_device_type" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@color/colorWhite"
+            android:text="@string/user"
+            android:textColor="@color/colorLightGrey"
+            android:layout_marginTop="-2dp"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTransactionType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/llTransactionType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:padding="5dp">
+
+            <Spinner
+                android:id="@+id/spinnerTransactionType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:dropDownVerticalOffset="50dp"
+                android:prompt="@string/select_device_type" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@color/colorWhite"
+            android:text="@string/transaction_type"
+            android:textColor="@color/colorLightGrey"
+            android:layout_marginTop="-2dp"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:errorTextAppearance="@style/edit_text_error_hint"
+        app:hintTextAppearance="@style/edit_text_normal_hint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:maxLength="6"
+            android:singleLine="true"
+            android:hint="@string/amount" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:errorTextAppearance="@style/edit_text_error_hint"
+        app:hintTextAppearance="@style/edit_text_normal_hint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:editable="false"
+            android:inputType="textCapWords"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:textAlignment="viewStart"
+            android:maxLength="80"
+            android:tag="false"
+            android:singleLine="true"
+            android:hint="@string/remark" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/button_proceed"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_rounded_bg"
+        android:text="@string/proceed"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+</LinearLayout>

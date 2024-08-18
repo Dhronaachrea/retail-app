@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="10dp"
+    android:paddingTop="5dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/tv_betType"
+        android:layout_width="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorDrawBackground"
+        android:text="DirectOne" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_betType"
+        android:background="@color/colorDisabled"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_schema_nested"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/view_line"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container"
+    android:layout_width="@dimen/_90sdp"
+    android:layout_height="@dimen/_55sdp"
+    android:gravity="center"
+    android:background="@drawable/result_game_card_shape"
+    android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/layout_game"
+            android:paddingBottom="10dp">
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:contentDescription="@string/image" />
+        <TextView
+            android:id="@+id/tv_gameName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textColor="#606060"
+            android:textSize="12sp" />
+        </LinearLayout>
+
+
+</LinearLayout>

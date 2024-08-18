@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/spl/Documents/workproject/retail-app/live_bet/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/home/spl/Documents/workproject/lms-tbg/gradle/caches/transforms-3/83abadaf5a02dcbde5c7445fe228a972/transformed/appcompat-1.0.0/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

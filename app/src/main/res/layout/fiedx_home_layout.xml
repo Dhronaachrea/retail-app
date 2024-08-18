@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/host_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/AppThemeNoActionBar"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/ll_aap_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:background="#012161"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_drawer"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="0dp"
+            android:contentDescription="@string/image"
+            android:onClick="onClickOpenDrawer"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/group_fieldex_nav" />
+
+        <ImageView
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/iv_drawer"
+            android:contentDescription="@string/image"
+            android:src="@drawable/field_xcam" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="end"
+            android:onClick="callBalanceApi"
+            android:orientation="vertical"
+            android:padding="@dimen/_1sdp">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="ssd"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_7ssp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/tvBal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="ssd"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#123374"
+        android:gravity="center">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="#fecd0b"
+            app:tabIndicatorHeight="@dimen/_1sdp"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed"
+            app:tabTextColor="@color/white" />
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

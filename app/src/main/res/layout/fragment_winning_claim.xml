@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/some_id_if_needed"
+        layout="@layout/layout_app_bar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutTicketNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:errorTextAppearance="@style/edit_text_error_hint"
+        app:hintTextAppearance="@style/edit_text_normal_hint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ticket_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="number"
+            android:text=""
+            android:textAlignment="viewStart"
+            android:gravity="start"
+            android:maxLength="15"
+            android:hint="@string/barcode_number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/black"
+        android:visibility="invisible"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/ivFlash"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/baseline_flash_off_24"/>
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/preview_view"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center" />
+
+        <!--<com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/scanner_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:autoFocusButtonColor="@color/colorAppOrange"
+            app:autoFocusButtonVisible="false"
+            app:flashButtonColor="@color/colorAppOrange"
+            app:flashButtonVisible="true"
+            app:frameColor="@color/colorAccent"
+            app:frameCornersSize="50dp"
+            app:frameCornersRadius="0dp"
+            app:frameAspectRatioWidth="1"
+            app:frameAspectRatioHeight="1"
+            app:frameSize="0.75"
+            app:frameThickness="2dp"
+            app:maskColor="#77000000"/>-->
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button_proceed"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textSize="16sp"
+        android:background="@drawable/button_rounded_bg"
+        android:text="@string/verify"
+        android:textColor="@color/colorWhite" />
+
+</LinearLayout>

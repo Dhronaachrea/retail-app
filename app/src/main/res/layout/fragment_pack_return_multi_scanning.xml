@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/some_id_if_needed"
+        layout="@layout/layout_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPackNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        app:errorTextAppearance="@style/edit_text_error_hint"
+        app:hintTextAppearance="@style/edit_text_normal_hint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ticket_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/pack_number"
+            android:inputType="number"
+            android:digits="@string/digits_book_id"
+            android:textAlignment="viewStart"
+            android:gravity="start"
+            android:maxLength="9"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:id="@+id/tvScanCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            android:textColor="@color/colorLightGrey"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvViewPacks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/button_rounded_border_green"
+            android:padding="5dp"
+            android:text="@string/view_packs"
+            android:textSize="12sp"
+            android:textColor="@color/colorGreen"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_weight="1">
+
+        <com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/scanner_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:autoFocusButtonColor="@color/colorAppOrange"
+            app:autoFocusButtonVisible="false"
+            app:flashButtonColor="@color/colorAppOrange"
+            app:flashButtonVisible="true"
+            app:frameAspectRatioHeight="1"
+            app:frameAspectRatioWidth="1"
+            app:frameColor="@color/colorAccent"
+            app:frameCornersRadius="0dp"
+            app:frameCornersSize="50dp"
+            app:frameSize="0.75"
+            app:frameThickness="2dp"
+            app:maskColor="#77000000" />
+
+    </FrameLayout>
+
+    <!--<TextView
+        android:id="@+id/tvScanCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorLightGrey"
+        android:textStyle="italic"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_proceed"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_rounded_bg"
+            android:text="@string/return_tag"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <!--<Button
+            android:id="@+id/button_scan_more"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_rounded_border_bg"
+            android:text="@string/scan_more"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/colorAppOrange"
+            android:textSize="14sp" />-->
+
+    </LinearLayout>
+
+</LinearLayout>

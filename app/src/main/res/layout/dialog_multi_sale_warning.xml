@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/rounded_corners"
+    android:layout_gravity="center"
+    android:layout_margin="30dp"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llInvalidTicketCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icon_warning"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/series_notice"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/we_couldn_t_create_a_series_from_the_last_added_ticket_to_this_one_would_you_like_to_start_a_new_series_from_the_ticket"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="15dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/add_separately"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/button_rounded_border_bg"
+                android:text="@string/add_separately"
+                android:textColor="@color/colorRed"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/start_series"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/button_rounded_bg"
+                android:text="@string/start_series"
+                android:textColor="@color/colorWhite"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>

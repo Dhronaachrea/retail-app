@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDrawResultBar"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvLastDrawTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/rectangle_2_copy_3"
+            android:drawablePadding="5dp"
+            android:text="dasdasdasdasdasdad"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/view_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_flag_1"
+                android:layout_width="30dp"
+                android:src="@drawable/triflag"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/tv_win"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/image_flag_2"
+                android:src="@drawable/clearflag"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorDrawBackground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="always" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

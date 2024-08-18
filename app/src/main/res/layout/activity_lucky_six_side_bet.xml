@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dg_bg"
+    android:orientation="vertical"
+    tools:context=".portrait_draw_games.ui.LuckySixSideBetActivity">
+
+    <include
+        android:id="@+id/some_id_if_needed"
+        layout="@layout/layout_app_bar_draw_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/llColorBallContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvColorHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#606060"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvColorOdds"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:text="@string/na"
+                        android:textColor="#ce1127"
+                        android:textSize="11sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/tvColorBetAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#012161"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:textColor="#ffffff">
+
+                    <com.skilrock.retailapp.utils.CircularTextView
+                        android:id="@+id/tvRed"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <com.skilrock.retailapp.utils.CircularTextView
+                        android:id="@+id/tvGreen"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <com.skilrock.retailapp.utils.CircularTextView
+                        android:id="@+id/tvBlue"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <com.skilrock.retailapp.utils.CircularTextView
+                        android:id="@+id/tvMagenta"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.skilrock.retailapp.utils.CircularTextView
+                        android:id="@+id/tvBrown"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <com.skilrock.retailapp.utils.CircularTextView
+                        android:id="@+id/tvCyan"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <com.skilrock.retailapp.utils.CircularTextView
+                        android:id="@+id/tvOrange"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <com.skilrock.retailapp.utils.CircularTextView
+                        android:id="@+id/tvGrey"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="10dp"
+                        android:textColor="#ffffff"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="@string/image"
+                    android:layerType="software"
+                    android:src="@drawable/dotted_grey_line" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llValueContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvValueHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#606060"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvValueBetAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#012161"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llLessThan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_red_outline_low_radius"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/tvLessThan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text=""
+                            android:textColor="#606060"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvLessThanOdds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/na"
+                            android:textColor="#ce1127"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llGreaterThan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_red_outline_low_radius"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/tvGreaterThan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text=""
+                            android:textColor="#606060"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvGreaterThanOdds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/na"
+                            android:textColor="#ce1127"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="@string/image"
+                    android:layerType="software"
+                    android:src="@drawable/dotted_grey_line" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEvenOddContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvEvenOddHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#606060"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvEvenOddBetAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#012161"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llMoreEven"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_red_outline_low_radius"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/tvMoreEven"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text=""
+                            android:textColor="#606060"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvMoreEvenOdds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/na"
+                            android:textColor="#ce1127"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMoreOdd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_red_outline_low_radius"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/tvMoreOdd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text=""
+                            android:textColor="#606060"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvMoreOddOdds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/na"
+                            android:textColor="#ce1127"
+                            android:textSize="11sp"
+                            tools:ignore="SmallSp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="@string/image"
+                    android:layerType="software"
+                    android:src="@drawable/dotted_grey_line" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e3e3e3" />
+
+    <LinearLayout
+        android:id="@+id/llBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f5f5f5"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:id="@+id/llReset"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/image"
+                android:src="@drawable/reset" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reset"
+                android:textColor="#9e9e9e"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="#e3e3e3" />
+
+            <com.skilrock.retailapp.utils.CircularTextView
+                android:id="@+id/circle_3"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                tools:ignore="SmallSp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNoOfBets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#d30e24"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_of_bets"
+                android:textColor="#9e9e9e"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="#e3e3e3" />
+
+            <com.skilrock.retailapp.utils.CircularTextView
+                android:id="@+id/circle_1"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                tools:ignore="SmallSp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvBetValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#d30e24"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvBetValueTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bet_value"
+                android:textColor="#9e9e9e"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAddBet"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="#d30e24">
+
+            <com.skilrock.retailapp.utils.CircularTextView
+                android:id="@+id/circle_2"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="-4dp"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableStart="@drawable/plus"
+                android:drawablePadding="10dp"
+                android:text="@string/add_bet"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

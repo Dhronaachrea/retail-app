@@ -1,0 +1,154 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:id="@+id/layout_color_bar"
+    android:orientation="horizontal"
+    android:weightSum="18">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_6"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_7"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_8"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_9"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_10"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_11"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_12"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_13"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_14"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_15"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_16"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_17"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_color_bar_18"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="2dp" />
+</LinearLayout>

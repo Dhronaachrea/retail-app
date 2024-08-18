@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.skilrock.retailapp">
+
+
+    <queries>
+        <package android:name="woyou.aidlservice.jiuiv5"/>
+    </queries>
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission
+        android:name="android.permission.BIND_DEVICE_ADMIN"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".ui.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="${appIcon}"
+        android:label="${app_name}"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="${appIcon}"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+
+        tools:replace="android:label">
+
+        <activity android:name=".ui.activities.drawgames.ResultPreviewActivity"></activity>
+        <activity android:name=".sle_game_portrait.ResultPreviewActivitySle"></activity>
+        <activity android:name=".virtual_sports.ui.VirtualSportsActivity" />
+        <activity android:name=".virtual_sports.ui.ActivityVirtualSports" />
+        <activity android:name=".sbs.ui.WinningClaimSbsPortraitActivity" />
+        <activity
+            android:name=".virtual_sports.ui.WinningClaimVirtualSports"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".virtual_sports.ui.WinningClaimVirtualSportsLandActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".sbs.ui.PrintActivitySbs" />
+        <activity android:name=".virtual_sports.ui.PrintActivityVirtualSports" />
+
+        <service
+            android:name=".utils.IndicatorService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":background" />
+        <service
+            android:name=".utils.FloatingViewService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":background" />
+
+        <activity
+            android:name=".sbs.ui.WinningClaimSbsLandActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".sbs.ui.ActivitySbsLandScape"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".ui.activities.fieldx.PaymentActivity"
+            android:theme="@style/Base.Theme.AppCompat.Dialog.Alert" />
+        <activity android:name=".portrait_draw_games.ui.SpinAndWinActivity" />
+        <!--
+        <activity android:name=".portrait_draw_games.ui.ResultDrawDialogActivity"
+                  android:theme="@style/AppTheme.Dialog"
+            ></activity>
+        -->
+        <activity android:name=".portrait_draw_games.ui.PrintDrawGameActivity" />
+        <activity
+            android:name=".portrait_draw_games.ui.ResultDrawDialogActivity"
+            android:theme="@style/AppTheme.Dialog" />
+        <activity android:name=".portrait_draw_games.ui.PurchaseDetailsActivity" />
+        <activity android:name=".portrait_draw_games.ui.FiveByNinetySideBetActivity" />
+        <activity
+            android:name=".portrait_draw_games.ui.WinningClaimActivity"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".portrait_draw_games.ui.FloatingDrawerActivity"
+            android:theme="@style/Theme.AppCompat.Translucent" /> <!-- <activity android:name=".portrait_draw_games.ui.PurchaseDetailsActivity" /> -->
+        <activity android:name=".portrait_draw_games.ui.LuckySixSideBetActivity" />
+        <activity android:name=".portrait_draw_games.ui.BetSelectionActivity" />
+        <activity android:name=".portrait_draw_games.ui.LuckySixMainBetActivity" />
+        <activity android:name=".portrait_draw_games.ui.FiveByNinetyMainBetActivity" />
+        <activity android:name=".portrait_draw_games.ui.DrawGameHomeActivity" />
+        <activity
+            android:name=".ui.activities.rms.SplashScreenActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.ola.ScannerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.rms.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".portrait_draw_games.ui.WinningClaimLandscapeActivity"
+            android:theme="@style/AppThemeNoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activities.rms.LoginActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activities.rms.LoginActivityFieldX"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".landscape_draw_games.ui.activities.DrawGameBaseActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".ui.activities.drawgames.DrawWinningClaimActivity" />
+        <activity android:name=".sle_game_portrait.ActivitySleGame" />
+        <activity
+            android:name=".sle_game_portrait.ActivityDraws"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".sle_game_portrait.ActivityGamePlay"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".sle_game_portrait.ActivityGamePlayFinal"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".sle_game_portrait.PrintActivityResult"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".sle_game_portrait.FloatingButtonActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".sle_game_portrait.sle_land_scape.ActivityGamePlayLand"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppThemeNoActionBar" />
+
+        <receiver
+            android:name=".portrait_draw_games.ui.NoPaperBroadCast"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="woyou.aidlservice.jiuv5.OUT_OF_PAPER_ACTION" />
+                <action android:name="woyou.aidlservice.jiuv5.COVER_OPEN_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".portrait_draw_games.ui.PrintReady"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="woyou.aidlservice.jiuv5.INIT_ACTION" />
+                <action android:name="woyou.aidlservice.jiuv5.NORMAL_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".ui.WakeUpJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name=".utils.RunOnBoot"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

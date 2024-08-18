@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/rounded_red_outline_low_radius"
+    android:layout_height="37dp">
+
+    <TextView
+        android:id="@+id/tvBetType"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:selectableItemBackground"
+        android:gravity="center"
+        android:minWidth="80dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:textColor="#d30e24"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/tvBottomColor"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="-1dp"
+        android:visibility="gone"
+        android:background="@drawable/rounded_red_filled_low_radius"/>
+
+</FrameLayout>

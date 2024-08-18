@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "243055550175",
+    "firebase_url": "https://retailapp-aef86.firebaseio.com",
+    "project_id": "retailapp-aef86",
+    "storage_bucket": "retailapp-aef86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243055550175:android:8555507a57c985cf23d36a",
+        "android_client_info": {
+          "package_name": "com.skilrock.retailapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243055550175-9d5g5g191kgl6u0q1a6pculm6jpn329i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.skilrock.retailapp",
+            "certificate_hash": "caf949cbd9774945c8950cf4418f788a0760ac4a"
+          }
+        },
+        {
+          "client_id": "243055550175-uet4pp2hrnt7cfe4n01k77p0bun4ubgk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQicvTWW4pG8pd7QbXq2s47dlq6H4ZWLE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "243055550175-uet4pp2hrnt7cfe4n01k77p0bun4ubgk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

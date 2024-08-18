@@ -1,0 +1,35 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {}
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+}
+
+dependencies {
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.fragment:fragment:1.0.0'
+    implementation 'org.jsoup:jsoup:1.11.3'
+    compileOnly files('libs/geckoview-armeabi-v7a-70.0.20191109004750.aar')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/some_id_if_needed"
+        layout="@layout/layout_app_bar" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutTicketNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:errorTextAppearance="@style/edit_text_error_hint"
+        app:hintTextAppearance="@style/edit_text_normal_hint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_ticket_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:digits="0123456789"
+            android:maxLength="15"
+            android:inputType="number"
+            android:hint="@string/barcode_number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="100dp"
+        android:visibility="invisible"
+        android:background="@color/black"
+        android:layout_weight="1">
+
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/preview_view"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:id="@+id/ivCamReload"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_baseline_refresh_24_red"/>
+
+            <ImageView
+                android:id="@+id/ivFlash"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_flash_off_24"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <!--<com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/scanner_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:autoFocusButtonColor="@color/colorAppOrange"
+            app:autoFocusButtonVisible="false"
+            app:flashButtonColor="@color/colorAppOrange"
+            app:flashButtonVisible="true"
+            app:frameColor="@color/colorAccent"
+            app:frameCornersSize="50dp"
+            app:frameCornersRadius="0dp"
+            app:frameAspectRatioWidth="1"
+            app:frameAspectRatioHeight="1"
+            app:frameSize="0.75"
+            app:frameThickness="2dp"
+            app:maskColor="#77000000"/>-->
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/add_more_proceed"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="2.5"
+            android:background="@drawable/button_rounded_border_grey_bg"
+            android:text="@string/add_more"
+            android:textColor="@color/light_grey"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/button_proceed"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="2.5"
+            android:background="@drawable/button_rounded_grey_fill_bg"
+            android:text="@string/proceed_to_claim"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

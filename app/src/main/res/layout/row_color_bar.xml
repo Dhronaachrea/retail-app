@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tvBar"
+    android:layout_width="match_parent"
+    android:layout_height="6dp"
+    android:layout_margin="1.5dp"
+    app:cardCornerRadius="5dp" />
+
+<!--<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvBar"
+    android:layout_width="match_parent"
+    android:layout_height="6dp"
+    android:textColor="#0c0c0c"
+    android:layout_margin="1.5dp"
+    android:background="@drawable/five_by_ninety_numbers" />-->
+
+<!--
+<android.support.v7.widget.CardView
+android:id="@+id/view_color_bar_1"
+android:layout_width="0dp"
+android:layout_height="match_parent"
+android:layout_marginStart="2dp"
+android:layout_weight="1"
+app:cardCornerRadius="2dp" />-->

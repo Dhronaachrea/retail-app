@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/rounded_corners"
+    android:layout_gravity="center"
+    android:layout_margin="30dp"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llInvalidTicketCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icon_success"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/congratulations"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginBottom="7dp"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/this_ticket_has_a_winner"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="7dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Winning Amount"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="6dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/etWinAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500,00 $"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/success_green_color"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="15dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"/>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tax_amount"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="3dp"
+                    android:textAlignment="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etTaxAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="50000,00 $"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:layout_width="0.9dp"
+                android:layout_height="match_parent"
+                android:background="@color/light_grey"
+                android:layout_marginHorizontal="6dp"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/net_amount"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="3dp"
+                    android:textAlignment="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etNetAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="50000,00 $"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            android:layout_marginVertical="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/et_ticket_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="502-209009-090"
+            android:textSize="14sp"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/etGameName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GameNAme"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/closeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/close"
+            android:textColor="@color/white"
+            android:background="@drawable/red_solid"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:textSize="14sp"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>
